@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Luthand0_MAshigo_PRG282_QuizPrg282
 {
@@ -15,6 +16,17 @@ namespace Luthand0_MAshigo_PRG282_QuizPrg282
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string filename = @"People.txt";
+            string[] lines = File.ReadAllLines(filename);
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                listBox1.Items.Add(lines[i]);
+            }
         }
     }
 }
