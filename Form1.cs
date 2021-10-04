@@ -22,6 +22,8 @@ namespace Luthand0_MAshigo_PRG282_QuizPrg282
         {
             string filename = @"People.txt";
             string[] lines = File.ReadAllLines(filename);
+            
+            listBox1.Items.Add("Agents:")
 
             for (int i = 0; i < lines.Length; i++)
             {
